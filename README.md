@@ -70,5 +70,5 @@ kafka-producer-perf-test \
 
 [2019-03-29 21:17:21,825] TRACE [ReplicaFetcher replicaId=102, leaderId=101, fetcherId=0] Follower has replica log end offset 21 after appending 73 bytes of messages for partition replicated-topic-two-0 (kafka.server.ReplicaFetcherThread)
 
-
+![](picture.jpg)
 
