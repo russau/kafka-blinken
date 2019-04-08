@@ -1,0 +1,4 @@
+- hosts: broker
+  tasks:
+  - import_role:
+      name: blinkt.common

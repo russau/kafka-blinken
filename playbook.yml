@@ -1,0 +1,12 @@
+- hosts: preflight
+  tasks:
+  - import_role:
+      name: confluent.preflight
+- hosts: zookeeper
+  tasks:
+  - import_role:
+      name: confluent.zookeeper
+- hosts: broker
+  tasks:
+  - import_role:
+      name: confluent.kafka-broker

@@ -1,0 +1,12 @@
+---
+# Tasks for setting up Blinkt
+- name: Determine if pimoroni Blinkt is installed
+  stat:
+    path: /home/pi/Pimoroni/blinkt/
+  register: blinkt_there
+  ignore_errors: True
+
+- name: Install Blinkt Install Script
+  script: roles/blinkt.common/files/blinkt_installation.sh -y
+  when: blinkt_there.stat.exists == False
+  become_user: pi

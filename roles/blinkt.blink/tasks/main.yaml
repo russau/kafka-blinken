@@ -1,0 +1,12 @@
+---
+# Tasks for Blinking Blinkt
+
+- name: Set the Blinkts to green
+  shell: python /home/pi/Pimoroni/blinkt/examples/rgb.py 0 100 0
+
+# Pause for 5 seconds to enjoy the lights
+- pause:
+    seconds: 5
+
+- name: Turn of the Blinkts
+  shell: python /home/pi/Pimoroni/blinkt/examples/rgb.py 0 0 0
