@@ -32,6 +32,10 @@ EOF
 * adhoc commands 
   * `ansible broker -a "echo hello" -i hosts.yml`
   * `ansible broker -a "python /home/pi/Pimoroni/blinkt/examples/rgb.py 50 0 0" -i hosts.yml`
+  * `ansible broker -a "cat /etc/kafka/server.properties" -i hosts.yml`
+  * `ansible broker -m shell -a "cat /etc/kafka/server.properties | grep dir" -i hosts.yml`
+  * `ansible broker -a "systemctl status confluent-kafka.service" -i hosts.yml`
+  * `ansible broker -m shell -a "cat /var/lib/kafka/data/replication-offset-checkpoint  | grep replicated-topic-one" -i hosts.yml`
 * installing pimoroni blinkt `curl https://get.pimoroni.com/blinkt | bash`
   * alternative install with ansible https://hem.fugedi.se/bitbucket/projects/TP/repos/raspberry-cluster/browse/installation/blinkt
 * messing around with topics
