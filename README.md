@@ -63,6 +63,11 @@ kafka-producer-perf-test \
     --producer-props bootstrap.servers=10.0.0.120:9092
 ```
 
+## TODO
+
+* `sudo chmod o+rx /var/log/kafka`
+* This looks like the way to monitor the file https://github.com/manos/python-inotify-tail_example/blob/master/tail-F_inotify.py
+* log4j trace generates A LOT of logs
 
 ## Grep Ideas
 

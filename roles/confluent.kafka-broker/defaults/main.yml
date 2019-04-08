@@ -30,8 +30,9 @@ kafka:
       transaction.state.log.min.isr: 2
       transaction.state.log.replication.factor: 3
       zookeeper.connection.timeout.ms: 6000
-      metric.reporters: io.confluent.metrics.reporter.ConfluentMetricsReporter
-      confluent.metrics.reporter.bootstrap.servers: "{{inventory_hostname}}:{{broker.config.port}}"
-      confluent.metrics.reporter.topic.replicas: 3
+      # Russ: is there a way to override in the inventory, how does the server react to an empty string?
+      # metric.reporters: io.confluent.metrics.reporter.ConfluentMetricsReporter
+      # confluent.metrics.reporter.bootstrap.servers: "{{inventory_hostname}}:{{broker.config.port}}"
+      # confluent.metrics.reporter.topic.replicas: 3
       ssl.endpoint.identification.algorithm: ""
       confluent.metrics.reporter.ssl.endpoint.identification.algorithm: ""
