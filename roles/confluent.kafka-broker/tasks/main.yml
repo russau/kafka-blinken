@@ -67,3 +67,13 @@
     name: "{{kafka.broker.service_name}}"
     enabled: "{{kafka.broker.systemd.enabled}}"
     state: "{{kafka.broker.systemd.state}}"
+- name: log4j settings
+  template:
+    src: log4j.properties.j2
+    dest: "{{kafka.broker.log4j_file}}"
+    mode: 0640
+    owner: "{{kafka.broker.user}}"
+    group: "{{kafka.broker.group}}"
+  notify:
+    - reload systemd
+    - restart kafka

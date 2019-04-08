@@ -3,6 +3,7 @@ kafka:
     user: cp-kafka
     group: confluent
     config_file: /etc/kafka/server.properties
+    log4j_file: /etc/kafka/log4j.properties
     systemd_file: /usr/lib/systemd/system/confluent-kafka.service
     systemd_override: /etc/systemd/system/confluent-kafka.service.d
     service_name: confluent-kafka
