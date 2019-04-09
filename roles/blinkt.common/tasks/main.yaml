@@ -10,3 +10,17 @@
   script: roles/blinkt.common/files/blinkt_installation.sh -y
   when: blinkt_there.stat.exists == False
   become_user: pi
+
+- name: pip install
+  pip:
+    # can I refer to the requirements file in ../files?
+    name: pyinotify
+    executable: pip2
+
+- name: blinking lights file
+  copy:
+    src: pynotify.py
+    dest: /home/pi/pynotify.py
+    owner: pi
+    group: pi
+    mode: 0644

@@ -31,6 +31,7 @@ EOF
   * pimoroni lights `ansible-playbook lights.yml -i hosts.yml`
 * adhoc commands 
   * `ansible broker -a "echo hello" -i hosts.yml`
+  * `ansible broker -a "python /home/pi/pynotify.py" -i hosts.yml`
   * `ansible broker -a "python /home/pi/Pimoroni/blinkt/examples/rgb.py 50 0 0" -i hosts.yml`
   * `ansible broker -a "cat /etc/kafka/server.properties" -i hosts.yml`
   * `ansible broker -m shell -a "cat /etc/kafka/server.properties | grep dir" -i hosts.yml`
